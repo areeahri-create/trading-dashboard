@@ -235,7 +235,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:12px}
   <section class="view" id="view-notices">
     <div class="flex" style="margin-bottom:12px"><span class="pill" id="noticeScope">–</span></div>
     <div class="grid g2">
-      <div class="card"><h2>냥냥님에게 전달사항</h2><div id="noticeUser"></div></div>
+      <div class="card"><h2>나에게 전달사항</h2><div id="noticeUser"></div></div>
       <div class="card"><h2>여리에게 전달사항</h2><div id="noticeAgent"></div></div>
     </div>
     <div class="card" style="margin-top:14px">
@@ -876,7 +876,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:12px}
     function keepNotice(x){ return x.team == null || inScopeTeam(x.team); }
     var isAll = PROJECT === 'all';
     $('noticeUser').innerHTML = noticeHtml((nn.user || []).filter(keepNotice),
-      isAll ? '냥냥님께 전달할 새 소식이 없습니다.' : PROJECT_INFO[PROJECT].short + ' 관련 새 소식이 없습니다.');
+      isAll ? '나에게 전달할 새 소식이 없습니다.' : PROJECT_INFO[PROJECT].short + ' 관련 새 소식이 없습니다.');
     $('noticeAgent').innerHTML = noticeHtml((nn.assistant || []).filter(keepNotice),
       isAll ? '여리에게 전달할 작업 항목이 없습니다.' : PROJECT_INFO[PROJECT].short + ' 관련 작업 항목이 없습니다.');
     $('noticeScope').textContent = isAll
